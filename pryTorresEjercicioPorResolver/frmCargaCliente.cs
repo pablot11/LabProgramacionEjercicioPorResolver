@@ -32,7 +32,7 @@ namespace pryTorresEjercicioPorResolver
                 {
                     string auxClientes = srControlClientes.ReadLine();
                     string[] Clientes = auxClientes.Split(',');
-
+                    //asdaasdasdasd
 
                     if (mskIdCliente.Text == Clientes[0])
                     {
