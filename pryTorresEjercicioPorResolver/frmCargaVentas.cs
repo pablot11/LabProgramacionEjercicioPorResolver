@@ -48,22 +48,30 @@ namespace pryTorresEjercicioPorResolver
         private void frmCargaVentas_Load(object sender, EventArgs e)
 
         {
-            //
+            //El streamreader se usa para leer el archivo, inicializa la instancia streamreader en el archivo 
             StreamReader srLeerIDVendedor = new StreamReader("./CargaVendedores.txt");
-            
+
+            //mientras sea distinto a eof pasa lo siguiente
             while (!srLeerIDVendedor.EndOfStream)
             {
+                //crea una variable que se le asigna un registro del archivo
                 string varLeerIDVendedor = srLeerIDVendedor.ReadLine();
+                //se crea un vector que se le asigna la variable, el split divide la cadena en comas
                 string[] vecLeerIDVendedor = varLeerIDVendedor.Split(',');
+                //Añade a la lista lo que esta en la posicion del vector 
                 lstVendedorId.Items.Add(vecLeerIDVendedor[0]);
             }
             srLeerIDVendedor.Close();
-
+            //El streamreader se usa para leer el archivo, inicializa la instancia streamreader en el archivo 
             StreamReader srLeerIDCliente = new StreamReader("./Clientes.txt");
+            //mientras sea distinto a eof pasa lo siguiente
             while (!srLeerIDCliente.EndOfStream)
             {
+                //crea una variable que se le asigna un registro del archivo
                 string varLeerIDCliente = srLeerIDCliente.ReadLine();
+                //se crea un vector que se le asigna la variable, el split divide la cadena en comas
                 string[] vecLeerIDCliente = varLeerIDCliente.Split(',');
+                //Añade a la lista lo que esta en la posicion del vector 
                 lstClienteId.Items.Add(vecLeerIDCliente[0]);
             }
             srLeerIDCliente.Close();

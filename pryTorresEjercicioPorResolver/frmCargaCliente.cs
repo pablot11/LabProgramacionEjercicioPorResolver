@@ -16,38 +16,39 @@ namespace pryTorresEjercicioPorResolver
         {
             InitializeComponent();
         }
-       
-        
-
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
             if (mskIdCliente.Text != "" && txtNombreCliente.Text != "")
             {
-                //El streamreader 
+                //El streamreader se usa para leer el archivo, inicializa la instancia streamreader en el archivo 
                 StreamReader srControlClientes = new StreamReader("./Clientes.txt");
-
+                //se crea un booleano con valor de false
                 bool bandera = false;
+                //mientras sea distinto a eof pasa lo siguiente
                 while (!srControlClientes.EndOfStream)
                 {
+                    //crea una variable que se le asigna un registro del archivo
                     string auxClientes = srControlClientes.ReadLine();
+                    //se crea un vector que se le asigna la variable, el split divide la cadena en comas
                     string[] Clientes = auxClientes.Split(',');
-                    //asdaasdasdasds
-                    //c
-
+      
+                    //Pregunta si la masked es igual al ID almacenado en el vector
                     if (mskIdCliente.Text == Clientes[0])
                     {
                         MessageBox.Show("Numero del cliente repetido");
                         mskIdCliente.Text = "";
+                        // el booleano toma el true, por lo cual no entra al siguiente if
                         bandera = true;
                     }
                 }
                 srControlClientes.Close();
-
+                //Si el booleano tiene el valor false entra
                 if (bandera == false)
                 {
-                    //true para que no sobreescriba en el archiv
+                    //streamwriter crea y editar el archivo, true para que verifique que el archivo existe lo va a recorrer si no lo crea
                     StreamWriter srCargaClientes = new StreamWriter("./Clientes.txt", true);
+                    //escribe un registro con los siguientes controles
                     srCargaClientes.WriteLine(mskIdCliente.Text + "," + txtNombreCliente.Text);
                     MessageBox.Show("Cliente cargado");
                     srCargaClientes.Close();
@@ -62,7 +63,6 @@ namespace pryTorresEjercicioPorResolver
             }
    
 
-            //true para que no sobreescriba en el archiv
 
         }
 
