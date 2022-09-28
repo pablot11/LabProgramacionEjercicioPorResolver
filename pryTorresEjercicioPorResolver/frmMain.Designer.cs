@@ -43,6 +43,7 @@
             this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.picLogoEmresa = new System.Windows.Forms.PictureBox();
             this.lblVenkaktus = new System.Windows.Forms.Label();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoEmresa)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             this.mnsPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmi,
             this.vendedoresToolStripMenuItem,
-            this.ventasToolStripMenuItem1});
+            this.ventasToolStripMenuItem1,
+            this.salirToolStripMenuItem});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
             this.mnsPrincipal.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -152,7 +154,7 @@
             // 
             this.picLogoEmresa.Image = ((System.Drawing.Image)(resources.GetObject("picLogoEmresa.Image")));
             this.picLogoEmresa.Location = new System.Drawing.Point(68, 92);
-            this.picLogoEmresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLogoEmresa.Margin = new System.Windows.Forms.Padding(2);
             this.picLogoEmresa.Name = "picLogoEmresa";
             this.picLogoEmresa.Size = new System.Drawing.Size(451, 359);
             this.picLogoEmresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,6 +172,13 @@
             this.lblVenkaktus.TabIndex = 2;
             this.lblVenkaktus.Text = "VenKaktus";
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,7 +189,7 @@
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnsPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "VenKaktus";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -208,6 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 

@@ -46,7 +46,7 @@ namespace pryTorresEjercicioPorResolver
                 //Si el booleano tiene el valor false entra
                 if (bandera == false)
                 {
-                    //streamwriter crea y editar el archivo, true para que verifique que el archivo existe lo va a recorrer si no lo crea
+                    //streamwriter crea y editar el archivo, true para que verifique que el archivo existe y no se sobreescriba si no lo crea
                     StreamWriter srCargaClientes = new StreamWriter("./Clientes.txt", true);
                     //escribe un registro con los siguientes controles
                     srCargaClientes.WriteLine(mskIdCliente.Text + "," + txtNombreCliente.Text);

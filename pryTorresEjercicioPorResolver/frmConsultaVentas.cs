@@ -36,6 +36,7 @@ namespace pryTorresEjercicioPorResolver
                     string[] vecVentas = varVentas.Split(',');
                     // Añade filas a la grilla con las posiciones del vector
                     dgvConsultaVentas.Rows.Add(vecVentas[3], vecVentas[2], vecVentas[4], vecVentas[0], vecVentas[1], vecVentas[5]);
+                    
             }
             srLectorVentas.Close();
 

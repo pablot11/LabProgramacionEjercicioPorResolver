@@ -99,7 +99,7 @@ namespace pryTorresEjercicioPorResolver
             frmCargaVendedor objVentanaVendedor = new frmCargaVendedor();
             objVentanaVendedor.ShowDialog();
         }
-
+       
         private void ventasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmCargaVentas objVentanaVentas = new frmCargaVentas();
@@ -111,6 +111,11 @@ namespace pryTorresEjercicioPorResolver
             frmConsultaVentas objVentanaConsultaVentas = new frmConsultaVentas();
             objVentanaConsultaVentas.ShowDialog();
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
